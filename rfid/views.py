@@ -21,7 +21,9 @@ database = firebase.database()
 
 
 def welcome(request):
-    uid = database.child("RFID").child("3D 75 8N 34").get.val()
+    uid = database.child("RFID").get().val()
+    date = database.child("RFID").child("uid").get().val()
     return render(request, 'index.html', {
-        "uid":uid
+        "uid":uid,
+        "date":date
     })
