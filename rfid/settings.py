@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-8yoj3+pnps#&mig7jq!l&rwlt2=2gvkan=*1(i)u$ke-0ll$9l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = [".vercel.app", "*"]
 
 
 # Application definition
@@ -77,12 +77,11 @@ WSGI_APPLICATION = "rfid.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
         "NAME": "verceldb",
         "USER" : "default",
         "PASSWORD" : "4SxQXGZ9KCyv",
         "HOST" : "ep-divine-haze-56302152-pooler.ap-southeast-1.postgres.vercel-storage.com",
-        "PORT" : ""
+        "PORT" : "5432"
     }
 }
 
