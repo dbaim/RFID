@@ -78,7 +78,11 @@ WSGI_APPLICATION = "rfid.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": "verceldb",
+        "USER" : "default",
+        "PASSWORD" : "4SxQXGZ9KCyv",
+        "HOST" : "ep-divine-haze-56302152-pooler.ap-southeast-1.postgres.vercel-storage.com",
+        "PORT" : ""
     }
 }
 
